@@ -43,8 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // Replace this with your own logic if needed.
     // For demonstration purposes, we'll send the counter value every 1 second.
     int counter = 0;
-    Timer.periodic(const Duration(seconds: 2), (timer) {
-      counter = counter + 2;
+    Timer.periodic(const Duration(seconds: 1), (timer) {
+      counter++;
       port.send(counter);
     });
   }
